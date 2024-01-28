@@ -1,0 +1,72 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('/images/space2.jpeg'); /* Ange sökvägen till din bildfil */
+    background-size: cover; /* Justera bildens storlek för att täcka hela sidan */
+    background-position: center; /* Centrera bakgrundsbilden */
+    background-repeat: no-repeat; /* Hindra upprepning av bakgrundsbilden */
+}
+
+
+header {
+    /* background-color: #001f3f; */
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+}
+
+nav {
+    background-color: #003366;
+    color: #ffffff;
+    padding: 10px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+nav li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.landing_section {
+    text-align: center;
+    padding: 50px;
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 15px;
+    width: 580px;
+    height: 580px;
+    border-radius: 20px;
+    background: #E9D5F0;
+    box-shadow: 8px 8px 30px 0px rgba(0, 0, 0, 0.25), -6px -6px 4px 0px rgba(255, 255, 255, 0.20);
+}
+
+
+
+footer {
+    background-color: #001f3f;
+    color: #ffffff;
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
