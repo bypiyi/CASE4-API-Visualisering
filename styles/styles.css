@@ -1,23 +1,53 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
-    padding: 0;
-    background-image: url('/images/space2.jpeg'); /* Ange sökvägen till din bildfil */
-    background-size: cover; /* Justera bildens storlek för att täcka hela sidan */
-    background-position: center; /* Centrera bakgrundsbilden */
-    background-repeat: no-repeat; /* Hindra upprepning av bakgrundsbilden */
+    background-image: url('/images/space3.jpg');
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
 }
 
 
+
+
+
+/* HEADER */
 header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     /* background-color: #001f3f; */
-    color: #ffffff;
+
     padding: 20px;
-    text-align: center;
+    border-radius: 30px;
+    margin: 10px;
 }
 
+header h1 {
+    margin: 0;
+    /* Ta bort marginalen för h1-elementet */
+}
+
+header img {
+    max-width: 80px;
+    max-height: 80px;
+    margin-left: 0px;
+}
+
+.nav_search {
+    max-width: 35px;
+    max-height: 35px;
+    margin-left: 0px;
+}
+
+/* ---------- */
+
+
+
+
+/* -------- */
 nav {
-    background-color: #003366;
+    /* background-color: #003366; */
     color: #ffffff;
     padding: 10px;
 }
@@ -36,13 +66,15 @@ nav li {
 
 nav a {
     text-decoration: none;
-    color: #ffffff;
+    color: #000000;
     font-weight: bold;
 }
 
-.landing_section {
-    text-align: center;
-    padding: 50px;
+
+/* ------ */
+
+main {
+    padding: 20px;
 }
 
 
@@ -51,22 +83,123 @@ nav a {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: 15px;
-    width: 580px;
-    height: 580px;
-    border-radius: 20px;
-    background: #E9D5F0;
-    box-shadow: 8px 8px 30px 0px rgba(0, 0, 0, 0.25), -6px -6px 4px 0px rgba(255, 255, 255, 0.20);
+    max-width: 800px;
+
+    margin-bottom: 10px;
+    padding: 20px;
+    /* Lägg till en inre utfyllnad för att ge utrymme mellan innehållet och kanten av containern */
+
+    border-radius: 30px;
+
+
+    background: #ffffff73;
+    box-shadow: 8px 8px 30px 0px rgba(255, 255, 255, 0.164);
+    backdrop-filter: blur(1px);
 }
+    /* ---------- */
 
 
 
-footer {
-    background-color: #001f3f;
-    color: #ffffff;
-    padding: 10px;
-    text-align: center;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
+
+
+    /* ----------------- */
+    h1 {
+        text-align: center;
+        font-size: 1.8rem;
+        padding: 5px;
+    }
+
+    p {
+        font-size: 18px;
+        color: #ffffff;
+    }
+
+    /* ------ */
+
+
+
+    /* SEARCH */
+    .search-container {
+        display: flex;
+        align-items: center;
+    }
+
+    #searchInput {
+        margin-right: 8px;
+        border: none;
+        border-radius: 25px;
+        background-color: #ffffffa1;
+        height: 50px;
+        width: 250px;
+        position: relative;
+        /* Lägg till position relative för att rymma den absolut positionerade ikonen */
+    }
+
+    #searchButton {
+        padding: 8px;
+        background-color: #ffffff00;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    #searchButton img {
+        width: 40px;
+        height: 40px;
+    }
+
+    #searchButton:hover {
+        background-color: #ffffff00;
+    }
+
+
+    /* ------------ */
+
+
+
+    footer {
+        background-color: #001f3f71;
+        color: #ffffff;
+        padding: 10px;
+        text-align: center;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
+
+
+
+
+
+
+
+
+
+
+    /* INSTÄLLNINGAR FÖR GRID */
+    @media screen and (min-width: 400px) {
+        div.container {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+
+
+    @media screen and (min-width: 600px) {
+        div.container {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+
+
+    @media screen and (min-width: 800px) {
+        div.container {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    /* stora skärmar - skapa en begrändas bredd, ex 1280 px */
+    @media screen and (min-width: 1280px) {
+        div.container {
+            width: 1280px;
+        }
+    }
