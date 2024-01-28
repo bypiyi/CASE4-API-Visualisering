@@ -13,17 +13,30 @@ header {
     padding: 20px;
 }
 
+.circle-container {
+    width: 350px; /* Justera bredden av cirkeln efter behov */
+    height: 350px; /* Justera höjden av cirkeln efter behov */
+    border-radius: 50%;
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 .video-container {
-    position: relative;
-    height: 100vh; /* 100% av fönsterhöjden */
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
     overflow: hidden;
 }
 
 #myVideo {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    min-width: 100%; 
+    min-width: 100%;
     min-height: 100%;
 }
 
@@ -34,5 +47,13 @@ header {
     transform: translate(-50%, -50%);
     text-align: center;
     color: #ffffff;
-    z-index: 1; /* Sätt en z-index så att innehållet hamnar ovanpå videon */
+    z-index: 1;
 }
+
+    /* stora skärmar - skapa en begrändas bredd, ex 1280 px */
+    @media screen and (min-width: 1280px) {
+        .circle-container {
+            width: 800px;
+            height: 800px;
+        }
+    }
