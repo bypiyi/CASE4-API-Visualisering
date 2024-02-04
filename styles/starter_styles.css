@@ -1,7 +1,11 @@
-body, html {
+body,
+html {
     margin: 0;
     padding: 0;
-    height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 header {
@@ -13,47 +17,71 @@ header {
     padding: 20px;
 }
 
-.circle-container {
-    width: 350px; /* Justera bredden av cirkeln efter behov */
-    height: 350px; /* Justera höjden av cirkeln efter behov */
-    border-radius: 50%;
-    overflow: hidden;
-    position: absolute;
+
+
+video {
+    position: fixed;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.video-container {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-}
-
-#myVideo {
     min-width: 100%;
     min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: -1;
+    /* Lägger videon bakom andra element */
+
 }
 
-.content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+
+
+/* KNAPP */
+.button {
+    background-color: #ffffff27;
+    border: 0.5px solid white;
+    color: white;
+    padding: 15px 35px;
     text-align: center;
-    color: #ffffff;
-    z-index: 1;
+    text-decoration: none;
+    display: inline-block;
+    margin: -20px 2px;
+    cursor: pointer;
 }
 
-    /* stora skärmar - skapa en begrändas bredd, ex 1280 px */
-    @media screen and (min-width: 1280px) {
-        .circle-container {
-            width: 800px;
-            height: 800px;
-        }
-    }
+.button:hover {
+    background-color: #ffffff73; /* Bakgrundsfärg ändras vid hover */
+}
+/* ------------------------ */
+
+
+
+
+
+/* Container för framsida-text */
+.front_text {
+    padding: 20px;
+    margin-top: -30px;
+    /* 420 om det ska vara längst ner */
+}
+
+
+
+
+h1 {
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    font-size: 3rem;
+    font-weight: 900;
+    line-height: 0.9;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    font-size: 1rem;
+    font-weight: 300;
+    text-decoration: none;
+}
