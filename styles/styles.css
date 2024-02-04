@@ -1,7 +1,12 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0 auto;
-    background-image: url('/images/space3.jpg');
+    background: linear-gradient(
+        to bottom, 
+        rgba(252, 225, 170, 0.329) 00%, 
+        rgba(233, 224, 206, 0.171) 30%, 
+        rgb(255, 255, 255) 100%
+      );
     background-size: cover;
     width: 100vw;
     height: 100vh;
@@ -18,7 +23,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    padding: 5px;
     border-radius: 30px;
     margin: 10px;
 }
@@ -29,14 +34,14 @@ header h1 {
 }
 
 header img {
-    max-width: 80px;
-    max-height: 80px;
+    max-width: 50px;
+    max-height: 50px;
     margin-left: 0px;
 }
 
 .nav_search {
-    max-width: 35px;
-    max-height: 35px;
+    max-width: 25px;
+    max-height: 25px;
     margin-left: 0px;
 }
 
@@ -74,135 +79,169 @@ nav a {
 /* ------ */
 
 main {
+    position: fixed;
     padding: 20px;
+    margin-top: -50px;
 }
 
 
 .container {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    align-items: left;
+    justify-content: left;
     max-width: 800px;
-
     margin-bottom: 10px;
-    padding: 20px;
     /* Lägg till en inre utfyllnad för att ge utrymme mellan innehållet och kanten av containern */
-
-    border-radius: 30px;
-
-
-    background: #ffffff73;
-    box-shadow: 8px 8px 30px 0px rgba(255, 255, 255, 0.164);
-    backdrop-filter: blur(1px);
 }
-    /* ---------- */
+
+
+
+/* ---------- */
 
 
 
 
 
-    /* ----------------- */
-    h1 {
-        text-align: center;
-        font-size: 1.8rem;
-        padding: 5px;
+/* ----------------- */
+h1 {
+    font-family: 'Poppins', sans-serif;
+    color: black;
+    font-size: 3rem;
+    font-weight: 900;
+    line-height: 0.9;
+}
+
+p {
+    font-family: 'Poppins', sans-serif;
+    color: black;
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.5;
+}
+
+/* ------ */
+
+
+
+/* SEARCH */
+
+
+/* ------------ */
+
+
+
+
+/* FOOTER */
+footer {
+    /* background-color: #001f3f71; */
+    color: #ffffff;
+    text-align: left;
+    position: fixed;
+    bottom: 0;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.img_background {
+    width: 100%;
+    /* Bilden fyller bredden av dess förälder (containern) */
+    height: 250px;
+    /* Begränsa höjden till höjden av användarens vyhöjd */
+    margin: 0;
+    /* border-top-left-radius: 10px;
+    border-top-right-radius: 10px; */
+    display: block;
+}
+
+
+.overlay-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 20px; 
+    color: white;
+    z-index: 1;
+    margin-bottom: -10px;
+  }
+  
+
+  .overlay-text p {
+    font-size: 0.5rem;
+    color: white;
+    font-weight: 300;
+    margin: 10px 0 0;
+    text-align: left;
+  }
+
+  /* -------------- */
+
+
+
+
+
+
+
+/* INSTÄLLNINGAR FÖR GRID */
+@media screen and (min-width: 400px) {
+    div.container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+
+@media screen and (min-width: 600px) {
+    div.container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+
+@media screen and (min-width: 800px) {
+    div.container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* stora skärmar - skapa en begrändas bredd, ex 1280 px */
+@media screen and (min-width: 1280px) {
+    div.container {
+        width: 1280px;
     }
 
-    p {
-        font-size: 18px;
-        color: #ffffff;
+    header {
+        width: 1280px;
     }
-
-    /* ------ */
-
-
-
-    /* SEARCH */
-    .search-container {
-        display: flex;
-        align-items: center;
-    }
-
-    #searchInput {
-        margin-right: 8px;
-        border: none;
-        border-radius: 25px;
-        background-color: #ffffffa1;
-        height: 50px;
-        width: 250px;
-        position: relative;
-        /* Lägg till position relative för att rymma den absolut positionerade ikonen */
-    }
-
-    #searchButton {
-        padding: 8px;
-        background-color: #ffffff00;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-    }
-
-    #searchButton img {
-        width: 40px;
-        height: 40px;
-    }
-
-    #searchButton:hover {
-        background-color: #ffffff00;
-    }
-
-
-    /* ------------ */
+}
 
 
 
-    footer {
-        background-color: #001f3f71;
-        color: #ffffff;
-        padding: 10px;
-        text-align: center;
-        position: fixed;
-        bottom: 0;
-        width: 100%;
-    }
+/* KNAPP */
+.button {
+    background-color: #ffffff27;
+    border: 0.5px solid rgba(255, 255, 255, 0.247);
+    color: white;
+    padding: 3px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 30px;
+    margin-bottom: -5px;
+}
 
+.button:hover {
+    background-color: #05050573;
+}
 
-
-
-
-
-
-
-
-
-    /* INSTÄLLNINGAR FÖR GRID */
-    @media screen and (min-width: 400px) {
-        div.container {
-            grid-template-columns: repeat(1, 1fr);
-        }
-    }
-
-
-    @media screen and (min-width: 600px) {
-        div.container {
-            grid-template-columns: repeat(1, 1fr);
-        }
-    }
-
-
-    @media screen and (min-width: 800px) {
-        div.container {
-            grid-template-columns: repeat(2, 1fr);
-        }
-    }
-
-    /* stora skärmar - skapa en begrändas bredd, ex 1280 px */
-    @media screen and (min-width: 1280px) {
-        div.container {
-            width: 1280px;
-        }
-        header {
-            width: 1280px;
-        }
-    }
+a:link,
+a:visited,
+a:active {
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    font-size: 0.8rem;
+    font-weight: 300;
+    text-decoration: none;
+}
+/* ------------------------ */
