@@ -26,6 +26,7 @@ header {
     padding: 5px;
     border-radius: 30px;
     margin: 10px;
+    position: absolute;
 }
 
 header h1 {
@@ -81,7 +82,7 @@ nav a {
 main {
     position: fixed;
     padding: 20px;
-    margin-top: -50px;
+    margin-top: 30px;
 }
 
 
@@ -163,7 +164,7 @@ footer {
     padding: 20px; 
     color: white;
     z-index: 1;
-    margin-bottom: -10px;
+    margin-bottom: -8px;
   }
   
 
@@ -222,7 +223,7 @@ footer {
     background-color: #ffffff27;
     border: 0.5px solid rgba(255, 255, 255, 0.247);
     color: white;
-    padding: 3px 25px;
+    padding: 2px 20px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -240,8 +241,65 @@ a:visited,
 a:active {
     font-family: 'Poppins', sans-serif;
     color: white;
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     font-weight: 300;
     text-decoration: none;
 }
 /* ------------------------ */
+
+
+
+
+
+/* SÖKIKONEN */
+/* styling search bar */
+form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff00;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 900;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  
+  select {
+    width: 100%;
+    padding: 10px;
+    height: 45px;
+    margin-bottom: 16px;
+    border: 1px solid white;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 12px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    text-transform: uppercase;
+  }
+  
+  button {
+    background-color: #d6ba963d;
+    color: black;
+    width: 100%;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+  }
+  
+  button:hover {
+    background-color: white;
+  }

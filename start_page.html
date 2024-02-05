@@ -19,10 +19,12 @@
 
 
     <header>
-        <img src="/images/logo4.png" alt="Rymdtema Logo">
+        <a href="start_page.html">
+            <img src="/images/logo4.png" alt="Rymdtema Logo">
+        </a>
 
         <nav>
-            <img src="/images/serach.png" alt="Sökikon" class="nav_search">
+            <!-- <img src="/images/serach.png" alt="Sökikon" class="nav_search"> -->
         </nav>
 
     </header>
@@ -36,11 +38,36 @@
         <div class="container">
 
             <h1>MARS ROVER PHOTOS</h1>
-            <p>This API is designed to collect image data gathered by NASA's Curiosity, Opportunity, and Spirit rovers
-                on Mars and make it more easily available to other developers, educators, and citizen scientists. This
-                API is maintained by Chris Cerami. </p>
 
         </div>
+
+        <!-- SÖKIKONEN -->
+        <!-- <div class="search">
+            <form action="#">
+                <input type="text" placeholder="Search API" name="search">
+            </form>
+        </div> -->
+        <!-- '''''''''''''''''' -->
+
+
+        <form action="#" method="get">
+            <label for="camera">CHOOSE A CAMERA</label>
+            <select id="camera" name="camera">
+                <option value="FHAZ">Front Hazard Avoidance Camera</option>
+                <option value="RHAZ">Rear Hazard Avoidance Camera</option>
+                <option value="MAST">Mast Camera</option>
+                <option value="CHEMCAM">Chemistry and Camera Complex</option>
+                <option value="MAHLI">Mars Hand Lens Imager</option>
+                <option value="MARDI">Mars Descent Imager</option>
+                <option value="NAVCAM">Navigation Camera</option>
+                <option value="PANCAM">Panoramic Camera</option>
+                <option value="MINITES">Miniature Thermal Emission Spectrometer (Mini-TES)</option>
+
+            </select>
+
+            <button type="submit">SHOW RESULT</button>
+        </form>
+
 
     </main>
 
@@ -51,7 +78,7 @@
         <img src="/images/space7.png" alt="Rymdtema" class="img_background">
 
         <div class="overlay-text">
-                <a href="index.html" class="button">HOME</a>
+            <a href="index.html" class="button">HOME</a>
 
             <p>GLIMÅKRA FOLKHÖGSKOLA <BR>
                 ALICIA PIYI TSIRIGOTIS <br>
