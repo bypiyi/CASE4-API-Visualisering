@@ -37,21 +37,15 @@
 
         <div class="container">
 
+            <p class="overline">Powerd by <b>NASA</b></p>
             <h1>MARS ROVER PHOTOS</h1>
+            <p class="underline">Choose a camera down below</p>
 
         </div>
 
-        <!-- SÖKIKONEN -->
-        <!-- <div class="search">
-            <form action="#">
-                <input type="text" placeholder="Search API" name="search">
-            </form>
-        </div> -->
-        <!-- '''''''''''''''''' -->
 
-
-        <form action="#" method="get">
-            <label for="camera">CHOOSE A CAMERA</label>
+        <form id="cameraForm">
+            <!-- <label for="camera">CHOOSE A CAMERA</label> -->
             <select id="camera" name="camera">
                 <option value="FHAZ">Front Hazard Avoidance Camera</option>
                 <option value="RHAZ">Rear Hazard Avoidance Camera</option>
@@ -64,8 +58,7 @@
                 <option value="MINITES">Miniature Thermal Emission Spectrometer (Mini-TES)</option>
 
             </select>
-
-            <button type="submit">SHOW RESULT</button>
+            <button type="submit">SUBMIT</button>
         </form>
 
 
@@ -84,6 +77,23 @@
                 ALICIA PIYI TSIRIGOTIS <br>
         </div>
     </footer>
+
+
+    <script>
+        document.getElementById("cameraForm").addEventListener("submit", function(event) {
+            // Prevent the default form submission
+            event.preventDefault();
+    
+            // Get the selected option value
+            var selectedCamera = document.getElementById("camera").value;
+    
+            // Construct the URL with the selected option value
+            var url = "result_page.html?camera=" + selectedCamera;
+    
+            // Navigate to the constructed URL
+            window.location.href = url;
+        });
+    </script>
 
 </body>
 
