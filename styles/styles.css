@@ -321,3 +321,14 @@ form {
   button:hover {
     background-color: white;
   }
+
+
+
+
+  /* RESULTPAGE */
+  #container {
+    width: 500px;
+    height: 500px;
+    background-color: blue;
+    align-items: center;
+  }
