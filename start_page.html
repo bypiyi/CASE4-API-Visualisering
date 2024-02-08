@@ -7,19 +7,21 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;900&display=swap" rel="stylesheet">
 
 
     <link rel="stylesheet" href="./styles/styles.css">
 
     <title>API-Visualisering</title>
+
+
 </head>
 
 <body>
 
 
     <header>
-        <a href="start_page.html">
+        <a href="index.html">
             <img src="/images/logo4.png" alt="Rymdtema Logo">
         </a>
 
@@ -44,9 +46,10 @@
         </div>
 
 
-        <form id="cameraForm">
-            <!-- <label for="camera">CHOOSE A CAMERA</label> -->
-            <select id="camera" name="camera">
+
+        <form id="camera-form">
+            <label for="camera-select">Choose a camera:</label>
+            <select id="camera-select" name="camera">
                 <option value="FHAZ">Front Hazard Avoidance Camera</option>
                 <option value="RHAZ">Rear Hazard Avoidance Camera</option>
                 <option value="MAST">Mast Camera</option>
@@ -54,11 +57,8 @@
                 <option value="MAHLI">Mars Hand Lens Imager</option>
                 <option value="MARDI">Mars Descent Imager</option>
                 <option value="NAVCAM">Navigation Camera</option>
-                <option value="PANCAM">Panoramic Camera</option>
-                <option value="MINITES">Miniature Thermal Emission Spectrometer (Mini-TES)</option>
-
             </select>
-            <button type="submit">SUBMIT</button>
+            <input type="submit" value="FETCH PHOTOS" class="button_submit">
         </form>
 
 
@@ -80,19 +80,31 @@
 
 
     <script>
-        document.getElementById("cameraForm").addEventListener("submit", function(event) {
-            // Prevent the default form submission
-            event.preventDefault();
+        // document.getElementById("cameraForm").addEventListener("submit", function(event) {
+        //     // Prevent the default form submission
+        //     event.preventDefault();
     
-            // Get the selected option value
-            var selectedCamera = document.getElementById("camera").value;
+        //     // Get the selected option value
+        //     var selectedCamera = document.getElementById("camera").value;
     
-            // Construct the URL with the selected option value
-            var url = "result_page.html?camera=" + selectedCamera;
+        //     // Construct the URL with the selected option value
+        //     var url = "result_page.html?camera=" + selectedCamera;
     
-            // Navigate to the constructed URL
-            window.location.href = url;
+        //     // Navigate to the constructed URL
+        //     window.location.href = url;
+        // });
+
+
+        document.getElementById('camera-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form submission
+
+            const selectedCamera = document.getElementById('camera-select').value;
+            const redirectUrl = `result_page.html?camera=${selectedCamera}`;
+            window.location.href = redirectUrl;
         });
+    </script>
+
+
     </script>
 
 </body>
