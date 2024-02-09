@@ -47,8 +47,10 @@ video {
 }
 
 .button:hover {
-    background-color: #ffffff3b; /* Bakgrundsfärg ändras vid hover */
+    background-color: #ffffff3b;
+    /* Bakgrundsfärg ändras vid hover */
 }
+
 /* ------------------------ */
 
 

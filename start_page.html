@@ -48,7 +48,7 @@
 
 
         <form id="camera-form">
-            <label for="camera-select">Choose a camera:</label>
+            <!-- <label for="camera-select">Choose a camera:</label> -->
             <select id="camera-select" name="camera">
                 <option value="FHAZ">Front Hazard Avoidance Camera</option>
                 <option value="RHAZ">Rear Hazard Avoidance Camera</option>
@@ -58,7 +58,7 @@
                 <option value="MARDI">Mars Descent Imager</option>
                 <option value="NAVCAM">Navigation Camera</option>
             </select>
-            <input type="submit" value="FETCH PHOTOS" class="button_submit">
+            <input type="submit" value="SHOW PHOTOS" class="button_submit">
         </form>
 
 
@@ -79,33 +79,7 @@
     </footer>
 
 
-    <script>
-        // document.getElementById("cameraForm").addEventListener("submit", function(event) {
-        //     // Prevent the default form submission
-        //     event.preventDefault();
-    
-        //     // Get the selected option value
-        //     var selectedCamera = document.getElementById("camera").value;
-    
-        //     // Construct the URL with the selected option value
-        //     var url = "result_page.html?camera=" + selectedCamera;
-    
-        //     // Navigate to the constructed URL
-        //     window.location.href = url;
-        // });
-
-
-        document.getElementById('camera-form').addEventListener('submit', function(event) {
-            event.preventDefault(); // Prevent form submission
-
-            const selectedCamera = document.getElementById('camera-select').value;
-            const redirectUrl = `result_page.html?camera=${selectedCamera}`;
-            window.location.href = redirectUrl;
-        });
-    </script>
-
-
-    </script>
+    <script src="script.js"></script>
 
 </body>
 
